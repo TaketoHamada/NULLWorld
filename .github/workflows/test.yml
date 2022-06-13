@@ -13,7 +13,8 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          projectPath: .
+          projectPath: 
+            - .
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           unityVersion: 2021.3.2f1
           testMode: All
