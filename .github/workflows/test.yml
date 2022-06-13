@@ -3,7 +3,7 @@ on:
   workflow_dispach: {}
   jobs:
     test:
-      name: Run EditorMode and PlayMode Test
+    - name: Run EditorMode and PlayMode Test
       runs-on: ubuntu-latest
       steps:
         - name: Check out my unity project.
