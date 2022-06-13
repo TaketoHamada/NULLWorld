@@ -15,7 +15,7 @@ jobs:
         with:
           projectPath: .
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          unityVersion: 21.3.2f1
+          unityVersion: 2021.3.2f1
           testMode: All
       - uses: actions/upload-artifact@v2
         if: always()
