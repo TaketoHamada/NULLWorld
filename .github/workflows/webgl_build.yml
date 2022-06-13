@@ -1,26 +1,26 @@
-name: Run the WebGL build
+name: Run the Android build
 on:
   workflow_dispatch: {}
 jobs:
   build:
-    name: Run the WebGL build
+    name: Run the Android build
     runs-on: ubuntu-latest
     steps:
       - name: Check out my unity project.
         uses: actions/checkout@v2
-      - name: Run the WebGL build
+      - name: Run the Android build
         uses: game-ci/unity-builder@v2
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          targetPlatform: WebGL
+          targetPlatform: Android
           unityVersion: 2021.3.2f1
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
           branch: gh-pages
           folder: build
-      - name: Upload the WebGL Build
+      - name: Upload the Android Build
         uses: actions/upload-artifact@v2
         with:
           name: Build
